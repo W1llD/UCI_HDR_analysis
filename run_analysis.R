@@ -18,6 +18,7 @@ cbind(subject_test,y_test,X_test) -> test
 cbind(subject_train,y_train,X_train) -> train
 rbind(train,test) -> HAR
 
+gsub("[()]","",features$V2) -> features$V2
 names(HAR) <- c("subject","lable",as.character(features$V2))
 rm(subject_test,y_test,X_test,subject_train,y_train,X_train,test,train,features)
 
