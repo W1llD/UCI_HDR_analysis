@@ -20,7 +20,7 @@ rbind(train,test) -> HAR
 
 gsub("[()]","",features$V2) -> features$V2
 names(HAR) <- c("subject","lable",as.character(features$V2))
-rm(subject_test,y_test,X_test,subject_train,y_train,X_train,test,train,features)
+rm(subject_test,y_test,X_test,subject_train,y_train,X_train,test,train)
 
-HAR[,c(1,2,grep('mean[^F]|std',names(HAR)))] %>% mutate(activity = as.character(activity_lables[lable,2])) %>% select(c(1,69,3:68))-> HAR
+HAR[,c(1,2,grep('mean[^F]|std',names(HAR)))] %>% mutate(activity = as.character(activity_lables[lable,2])) %>% select(c(1,60,3:59))-> HAR
 HAR %>% group_by(activity,subject) %>% 
