@@ -1,0 +1,13 @@
+variables         describe
+activity_lables         The activities that loaded from the activity_labels.txt 
+features          The features that loaded from the features.txt
+subject_test          subject_test that loaded from the subject_test.txt
+X_test          X_test that loaded from the X_test.txt
+y_test          y_test that loaded from the y_test.txt
+subject_train         subject_train that loaded from the subject_train.txt
+X_train         X_train that loaded from the X_train.txt
+y_train         y_train that loaded from the y_train.txt
+test          combin subject_test,X_test,y_test as one df 
+train         combin subject_train,X_train,y_train as one df
+HAR         combin test and train as one df, then tidy and replace it as one df until get the course project required.
+
